@@ -1,0 +1,12 @@
+mysql -h production.cnieygy4yfmb.ap-northeast-3.rds.amazonaws.com -u admin -p
+  USE tcs;
+CREATE TABLE User (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,  -- Note: Storing plain text passwords is not secure
+    phone VARCHAR(15) NOT NULL,
+    gender VARCHAR(10) NOT NULL,
+    dob DATE NOT NULL,
+    otp VARCHAR(6)
+);
